@@ -1,6 +1,8 @@
-# PolyphonicFormer: Unified Query Learning for Depth-aware Video Panoptic Segmentation
+# PolyphonicFormer: Unified Query Learning for Depth-aware Video Panoptic Segmentation (ECCV-2022)
 
 Winner method of the ICCV-2021 SemKITTI-DVPS [Challenge](https://motchallenge.net/workshops/bmtt2021/).
+
+*The first End-to-End Transformer Framework for DVPS.*
 
 [Haobo Yuan](https://yuanhaobo.me/)\*,
 [Xiangtai Li](https://lxtgh.github.io/)\*,
