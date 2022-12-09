@@ -14,7 +14,6 @@ def single_gpu_test(
         eval_dir=None
 ):
     assert eval_dir is not None
-    logger = get_root_logger()
     model.eval()
     dataset = data_loader.dataset
     prog_bar = mmcv.ProgressBar(len(dataset))
@@ -23,7 +22,6 @@ def single_gpu_test(
         seq_id = data.pop('seq_id', None)[0].item()
         img_id = data.pop('img_id', None)[0].item()
         if img_id == 0:
-            logger.info("Start video {}".format(seq_id))
             model.module.init_tracker()
         with torch.no_grad():
             result = model(return_loss=False, rescale=True, **data)

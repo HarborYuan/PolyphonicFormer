@@ -21,7 +21,7 @@
 
 ![Demo2](demo/video_demo_2.gif)
 
-## Installation
+## Installation (Optional)
 You do not need to install the environment if you have docker in your environment. We already put the pre-built docker image on [docker hub](https://hub.docker.com/r/harbory/polyphonicformer). If you want to build the docker image by yourself, please run the following command in `scripts/docker_env`.
 ```commandline
 docker build -t polyphonicformer:release . --network=host
@@ -80,7 +80,11 @@ bash tools/dist_train.sh configs/polyphonic_video/poly_r50_cityscapes_1x.py 8 --
 
 ### Video testing
 ```commandline
-PYTHONPATH=. python tools/test_video.py configs/polyphonic_video/poly_r50_cityscapes_1x.py /opt/logger/vid001/latest.pth --eval-video DVPQ --video-dir /opt/logger/vid001
+PYTHONPATH=. python tools/test_video.py configs/polyphonic_video/poly_r50_cityscapes_1x.py https://huggingface.co/HarborYuan/PolyphonicFormer/resolve/main/polyphonic_r50_video.pth --eval-video DVPQ --video-dir ./tmp
+```
+To test your own training results, just replace the online checkpoints to your local checkpoints. For example, you can run as the following for video testing:
+```commandline
+PYTHONPATH=. python tools/test_video.py configs/polyphonic_video/poly_r50_cityscapes_1x.py /path/to/checkpoint.pth --eval-video DVPQ --video-dir ./tmp
 ```
 
 ## Acknowledgements
@@ -102,7 +106,7 @@ Please refer them if you think they are useful.
 ```
 
 ## Citation
-If you think the code are useful in your research, please consider refer PolyphonicFormer:
+If you think the code are useful in your research, please consider to refer PolyphonicFormer:
 ```bibtex
 @inproceedings{yuan2022polyphonicformer,
   title={Polyphonicformer: Unified Query Learning for Depth-aware Video Panoptic Segmentation},
