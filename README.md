@@ -4,6 +4,10 @@
 
 **PolyphonicFormer is accepted by [ECCV '22](https://eccv2022.ecva.net/), Tel Aviv, Israel.**
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/polyphonicformer-unified-query-learning-for/depth-aware-video-panoptic-segmentation-on)](https://paperswithcode.com/sota/depth-aware-video-panoptic-segmentation-on?p=polyphonicformer-unified-query-learning-for)
+
+	
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/polyphonicformer-unified-query-learning-for/depth-aware-video-panoptic-segmentation-on-1)](https://paperswithcode.com/sota/depth-aware-video-panoptic-segmentation-on-1?p=polyphonicformer-unified-query-learning-for)
 
 [Haobo Yuan](https://yuanhaobo.me)\*,
 [Xiangtai Li](https://lxtgh.github.io)\*,
@@ -29,8 +33,7 @@ docker build -t polyphonicformer:release . --network=host
 Please refer to the dockerfile for environment details if you insist on using conda.
 
 ## Datasets Preparation
-You can download the Cityscapes-DVPS datasets [here](https://huggingface.co/HarborYuan/PolyphonicFormer/resolve/main/cityscapes-dvps.zip).
-Suppose your path to datasets is DATALOC, please extract the zip file and make sure the datasets folder looks like this:
+You can download the Cityscapes-DVPS datasets [here](https://huggingface.co/HarborYuan/PolyphonicFormer/resolve/main/cityscapes-dvps.zip), and SemKITTI-DVPS datasets [here](https://huggingface.co/HarborYuan/PolyphonicFormer/resolve/main/semkitti-dvps.zip). Suppose your path to datasets is DATALOC, please extract the zip file and make sure the datasets folder looks like this:
 ```
 DATALOC
 |── cityscapes-dvps
